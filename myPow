@@ -5,7 +5,7 @@ int myPow(int base,unsigned int exponent){
      while(exponent){
           factor*=factor;
           if(exponent&0x01)
-               factor*=factor;
+               result*=factor;
           exponent=exponent>>1;     
      }
      return result;
