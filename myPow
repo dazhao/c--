@@ -1,0 +1,12 @@
+int myPow(int base,unsigned int exponent){
+     int result = exponent&0x01?base:1;
+     int factor = base;
+     exponent=exponent>>1;
+     while(exponent){
+          factor*=factor;
+          if(exponent&0x01)
+               factor*=factor;
+          exponent=exponent>>1;     
+     }
+     return result;
+}
